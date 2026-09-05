@@ -29,7 +29,7 @@ const REVIEWS = [
 
 export function ReviewCarousel() {
   const [index, setIndex] = useState(0);
-  const visible = [REVIEWS[index], REVIEWS[(index + 1) % REVIEWS.length]];
+  const visible = [index, (index + 1) % REVIEWS.length].map((i) => REVIEWS[i]!);
 
   return (
     <div>
